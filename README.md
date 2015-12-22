@@ -32,7 +32,7 @@ This strategy has several advantages:
 - Low memory requirement, making it scalable to large datasets (no need to store a vocabulary dictionary in memory)
 - Can be used in a streaming (partial fit) or parallel pipeline (no state computed during fit)
 
-The resulting token occurence matrix is fed to a Naive Bayes classifiers for learning discriminative features between paragraph content.
+The resulting token (e.g. word) occurence matrix is fed to a Naive Bayes (NB) classifiers for learning discriminative features between paragraphs. NB holds many advantage in a distributed system. The training translate very well to MapReduce jobs and thus scales to datasets in the millions. It also requires small amount of training data to estimate parameters (useful for costly labelling). The main disadvantage relies in the wrong assumption of independence between features. This requires the addition of something along the lines of Belief Networks (see Improvements)
 
 Using provided labels, we can propagate the confidence that similar data will have the same label among its first degree nodes (in an abstract similarity graph). By adjusting the sample weight according to this metric, we can take into account a larger mass of data from a smaller set of labelled data. For example, having the label "Neuroscience" for the sentence "Oscillatory phenomena and interaction of the human cortex", it is likely that "Interaction between brain regions through oscillation" should also be tagged "Neuroscience". We can capture this similarity through distributed neural network representation of sentences and use it in our Naive Bayes sample weight.
 
@@ -184,6 +184,13 @@ looking to expand beyond the english-speaking world/web.
 
 The learning architecture of distributed neural network paragraph representation permits more than one label per sentence. While this work focused on a single label as proof of concept, multiple label is likely to be relevant. Embedding the intrinsic hierarchy of scientific ontology is likely to be benificial also.
 
+
+#### Bayesian Belief Network ####
+
+
+#### Incomplete data ####
+
+In order to avoid assumptions, the rbc bounds all the possible probability estimates within intervals using a specialized estimation method. These intervals are then used to classify new cases by computing intervals on the posterior probability distributions over the classes given a new case and by ranking the intervals according to some criteria. We provide two scoring methods to rank intervals and a decision theoretic approach to trade off the risk of an erroneous classification and the choice of not classifying unequivocally a case. 
 
 
 ### Authors & Acknowledgements ###
