@@ -28,26 +28,21 @@ learning as the IDF of all past features will change with every new document -
 which would mean re-visiting and re-training on all the previous documents 
 (no-longer online). A straighforward alternative is to use Hashing of our paragraph as vectorizer which is then fed into classification algorithms. 
 
+This strategy has several advantages:
+- Low memory requirement, making it scalable to large datasets (no need to store a vocabulary dictionary in memory)
+- Can be used in a streaming (partial fit) or parallel pipeline (no state computed during fit)
 
+The resulting token occurence matrix is fed to a Naive Bayes classifiers for learning discriminative features between paragraph content.
 
-I also lay the foundation for an Paragraph Vectorizer which relies on the online
-update of vocabulary for NN word vectorizer approach. At this moment in time it
-only allows weight updates based on new training data. 
+I'm also attempting to lay the foundation for an online paragraph vectorizer based on distributed neural network. This will require updates on the vocabulary (see Improvement section) as at this moment in time it only allows weight updates based on new training data. Out of scope for this 2 days challenge but will definitely give it a shot in the next few weeks.
 
 
 
 #### How would you build a classifier that improves its accuracy by minimizing the overall cost? ####
 
-The problem at heart resides in taking maximum advantage of labelled data. 
-A first stop would be to look for similarities between labelled and unlabelled
-data to propagate the known label to documents where we have high confidence of
-similarity. This work takes advantage of an NN vectorizer as formalized in
-(Quoc Le & Tomas Mikolov) and implemented through Doc2Vec. The architecture
-proposed two learning approach, “distributed memory” (dm) and “distributed 
-bag of words” (dbow), with the former showing better results. 
+The problem at heart resides in taking maximum advantage of labelled data. A first stop would be to look for similarities between labelled and unlabelled data to propagate the known label to documents where we have high confidence of similarity. This work takes advantage of a distributed neural network vectorizer as formalized in (Quoc Le & Tomas Mikolov) and implemented through Doc2Vec. The architecture proposed two learning approach, “distributed memory” (dm) and “distributed bag of words” (dbow), with the former showing better results. 
 
 Quoc Le & Tomáš Mikolov: “Distributed Representations of Sentences and Documents”
-https://radimrehurek.com/gensim/models/doc2vec.html
 
 
 
@@ -56,8 +51,7 @@ https://radimrehurek.com/gensim/models/doc2vec.html
 ##### Processing time #####
 
 The performance of such a system can be evaluated at multiple scale. One would
-need to monitor training time and the potential bottlenecks it includes 
-(vectorizing? training classifier? increasing vocabulary?). 
+first need to monitor training and processing time along with the potential bottlenecks including vectorizing, training classifier, increasing size of vocabulary, number of features, regularization. This is typically done through profilers and on-the-fly statistics in development code.
 
 
 ##### Memory usage #####
@@ -85,13 +79,13 @@ presented to the user should be relevant and useful.
 
 With additional experts one must be careful not to overfit each personalities 
 by having them label a specific subset of the data. Ideally, each should be
-assigned various corners of the 
+assigned various corners of the dataset in order to get wide coverage.
 
 
-Variability within and across expert is also important to consider, as there 
+Variability within and across expert is also important to consider as there 
 is some level of subjectiveiy. Monitoring those variables by introducing
 redundant data for them to label at different time point might be relevant 
-assuming the budget allows it. With careful planning, this should point out 
+(assuming the budget allows it). With careful planning, this should point out 
 what is intrinsicately ambigious about the data and what needs to be refined 
 for the greatest accuracy. 
 
@@ -103,6 +97,7 @@ RAM. In the case above with a unique label per sentence, this causes memory
 usage to grow linearly with the size of the corpus. The similarity model to
 propagate known labels would thus scale linearly. 
 
+The vectorizer is also highly scalable as it doesn't keep any state or vocabulary in memory. 
 
 
 
@@ -127,21 +122,22 @@ memory and no compiling is required
 ### Dependencies ###
 _______________________________________________________________________________
 
-pip install numpy
-pip install sklearn
-pip install gensim
+- pip install numpy
+- pip install sklearn
+- pip install gensim
 
 
 
 ### Installation ###
 _______________________________________________________________________________
 
+Hopefully all you need to do is copy on your desktop. It's likely some path may be eroneous as I moved things around before pushing online.
 
 
 ### Improvements ###
 _______________________________________________________________________________
 
-Dynamic Vocabulary
+#### Dynamic Vocabulary ####
 
 Adding new vocabulary to Word2Vec Neural Network is currently in discussion
 and preliminary code has been pushed. I would pursue adding functionality to
@@ -154,7 +150,7 @@ Note that this could also be done in batch mode while the streaming classificati
 relies on previously computed vocabulary while still updating the weights
 
 
-Dissimilarity
+#### Dissimilarity ####
 
 Assuming we are to ask an expert to label data, we should ask him to label
 documents which are as dissimilar as possible in order to maximize the 
@@ -163,7 +159,7 @@ a cluster of very simmilar item will not provide us with great coverage of
 the potential data that we ultimately need to cover.
 
 
-Drifting trends
+#### Drifting trends ####
 
 It is not uncommon in online learning that additional data becomes problematic.
 This may stem from multiple factors like shifts in weight due to redundant 
@@ -172,7 +168,7 @@ accuracy as the model evolves and compute offline model to take over when
 degradation goes below a certain threshold
 
 
-Internationalization support
+#### Internationalization support ####
 
 While NLP approaches are often constrained to english grammar, the world is 
 filled with content of difference languages holding valuable information. 
@@ -180,20 +176,20 @@ Support for multiple language is a problem faced by many high-tech companies
 looking to expand beyond the english-speaking world/web.
 
 
-Multiple label support
+#### Multiple label support ####
 
 The learning architecture of distributed neural network paragraph representation permits more than one label per sentence. While this work focused on a single label as proof of concept, multiple label is likely to be relevant. Embedding the intrinsic hierarchy of scientific ontology is likely to be benificial also.
 
 
 
-Authors & Acknowledgements
+### Authors & Acknowledgements ###
 _______________________________________________________________________________
 
 Sebastien Dery
 
 
 
-Copyright Notice and Disclaimer
+### Copyright Notice and Disclaimer ###
 _______________________________________________________________________________
 
 

@@ -1,7 +1,33 @@
 """
--------------------------------------------------------------------------------
-                                    Utils
--------------------------------------------------------------------------------
+General I/O utility functions
+
+Usage:
+
+Options:
+
+Examples:
+
+License:
+
+Copyright (c) 2015 Sebastien Dery
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 """
 
 from sets import Set
@@ -95,60 +121,3 @@ def save_clf(clf,file_path):
 def load_clf(file_path):
     with open(file_path, 'rb') as f:
         return pickle.load(f)
-
-
-
-
-"""
-def stream_nature_documents(data_path=None):
-    ""Iterate over documents of the Nature dataset.
-
-    The Reuters archive will automatically be downloaded and uncompressed if
-    the `data_path` directory does not exist.
-
-    Documents are represented as dictionaries with 'body' (str),
-    'title' (str), 'topics' (list(str)) keys.
-
-    ""
-
-    DOWNLOAD_URL = ('http://archive.ics.uci.edu/ml/machine-learning-databases/'
-                    'reuters21578-mld/reuters21578.tar.gz')
-    ARCHIVE_FILENAME = 'reuters21578.tar.gz'
-
-    if data_path is None:
-        data_path = os.path.join(get_data_home(), "reuters")
-    if not os.path.exists(data_path):
-        # Download the dataset.
-        print("downloading dataset (once and for all) into %s" %
-              data_path)
-        os.mkdir(data_path)
-
-        def progress(blocknum, bs, size):
-            total_sz_mb = '%.2f MB' % (size / 1e6)
-            current_sz_mb = '%.2f MB' % ((blocknum * bs) / 1e6)
-            if _not_in_sphinx():
-                print('\rdownloaded %s / %s' % (current_sz_mb, total_sz_mb),
-                      end='')
-
-        archive_path = os.path.join(data_path, ARCHIVE_FILENAME)
-        urllib.request.urlretrieve(DOWNLOAD_URL, filename=archive_path,
-                                   reporthook=progress)
-        if _not_in_sphinx():
-            print('\r', end='')
-        print("untarring Reuters dataset...")
-        tarfile.open(archive_path, 'r:gz').extractall(data_path)
-        print("done.")
-
-    for filename in glob(os.path.join(data_path, "*.sgm")):
-        for doc in parser.parse(open(filename, 'rb')):
-            yield doc
-"""
-
-"""
-datafolder = "/Users/sdery/Desktop/Projects/Semantic_Extraction/yewno/data"
-category_name = 'astrophysics'
-c_file = "%s/%s.txt" % (datafolder,category_name)
-data = load_categoryfile(c_file)
-
-dataset = fetch_naturetitles(subset='train',categories=['astrophysics','biochemistry'],shuffle=False)
-"""
