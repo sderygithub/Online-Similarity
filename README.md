@@ -34,7 +34,9 @@ This strategy has several advantages:
 
 The resulting token occurence matrix is fed to a Naive Bayes classifiers for learning discriminative features between paragraph content.
 
-I'm also attempting to lay the foundation for an online paragraph vectorizer based on distributed neural network. This will require updates on the vocabulary (see Improvement section) as at this moment in time it only allows weight updates based on new training data. Out of scope for this 2 days challenge but will definitely give it a shot in the next few weeks.
+Using provided labels, we can propagate the confidence that similar data will have the same label among its first degree nodes (in an abstract similarity graph). By adjusting the sample weight according to this metric, we can take into account a larger mass of data from a smaller set of labelled data. For example, having the label "Neuroscience" for the sentence "Oscillatory phenomena and interaction of the human cortex", it is likely that "Interaction between brain regions through oscillation" should also be tagged "Neuroscience". We can capture this similarity through distributed neural network representation of sentences and use it in our Naive Bayes sample weight.
+
+Future work: I'm also attempting to lay the foundation for an online paragraph vectorizer based on distributed neural network. This will require updates on the vocabulary (see Improvement section) as at this moment in time it only allows weight updates based on new training data. Out of scope for this 2 days challenge but will definitely give it a shot in the next few weeks.
 
 
 
@@ -88,6 +90,8 @@ redundant data for them to label at different time point might be relevant
 (assuming the budget allows it). With careful planning, this should point out 
 what is intrinsicately ambigious about the data and what needs to be refined 
 for the greatest accuracy. 
+
+Nevertheless, the idea of crowdsourcing data is particularly interesting. It also adds the added benefit of confidence as single labels from an expert could be unreliable. The weight of each sample must therefore be adjusted. Depending on the system, one could attempt to extract meaning from the user interaction. For example, being asked to label the following sentence (Quantum spin of magnetic ferro-crystaline). We could make the plausible assumption that a difference in 2 versus 30 seconds to respond underline some uncertainty about the given label. This can further be taken into account in our Naive Bayes sample weight.
 
 
 ### Is your system scalable w.r.t. size of your dataset? ###
