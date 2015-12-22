@@ -24,9 +24,9 @@ available but at a virtual cost.
 	  - Validating algorithm and accuracy
 
 
-##### Strategy #####
+### How would you build a classifier that improves its accuracy by minimizing the overall cost? ###
 
-<strong>Hashing Vectorizer</strong>
+##### Hashing Vectorizer #####
 
 Although very relevant in many applications, TF-IDF is not suitable for online
 learning as the IDF of all past features will change with every new document -
@@ -37,23 +37,17 @@ This strategy has several advantages:
 - Low memory requirement, making it scalable to large datasets (no need to store a vocabulary dictionary in memory)
 - Can be used in a streaming (partial fit) or parallel pipeline (no state computed during fit)
 
-<strong>Naive Bayes</strong>
+##### Naive Bayes #####
 
 The resulting token (e.g. word) occurence matrix is fed to a Naive Bayes (NB) classifiers for learning discriminative features between paragraphs. NB holds many advantage in a distributed system. The training translate very well to MapReduce jobs and thus scales to datasets in the millions. It also requires small amount of training data to estimate parameters (useful for costly labelling). The main disadvantage relies in the wrong assumption of independence between features. This requires the addition of something along the lines of Belief Networks (see Improvements)
 
-<strong>Label Propagation</strong>
+##### Label Propagation #####
 
 Using provided labels, we can propagate the confidence that similar data will have the same label among its first degree nodes (in an abstract similarity graph). By adjusting the sample weight according to this metric, we can take into account a larger mass of data from a smaller set of labelled data. For example, having the label "Neuroscience" for the sentence "Oscillatory phenomena and interaction of the human cortex", it is likely that "Interaction between brain regions through oscillation" should also be tagged "Neuroscience". We can capture this similarity through distributed neural network representation of sentences and use it in our Naive Bayes sample weight.
 
-Future work: I'm also attempting to lay the foundation for an online paragraph vectorizer based on distributed neural network. This will require updates on the vocabulary (see Improvement section) as at this moment in time it only allows weight updates based on new training data. Out of scope for this 2 days challenge but will definitely give it a shot in the next few weeks.
+##### Future work (see Improvements) #####
 
-
-
-#### How would you build a classifier that improves its accuracy by minimizing the overall cost? ####
-
-The problem at heart resides in taking maximum advantage of labelled data. A first stop would be to look for similarities between labelled and unlabelled data to propagate the known label to documents where we have high confidence of similarity. This work takes advantage of a distributed neural network vectorizer as formalized in (Quoc Le & Tomas Mikolov) and implemented through Doc2Vec. The architecture proposed two learning approach, “distributed memory” (dm) and “distributed bag of words” (dbow), with the former showing better results. 
-
-Quoc Le & Tomáš Mikolov: “Distributed Representations of Sentences and Documents”
+I'm also attempting to lay the foundation for an online paragraph vectorizer based on distributed neural network. This will require updates on the vocabulary (see Improvement section) as at this moment in time it only allows weight updates based on new training data. Out of scope for this 2 days challenge but will definitely give it a shot in the next few weeks.
 
 
 
@@ -83,7 +77,7 @@ so as to limit the overhead of communication.
 ##### Accuracy #####
 
 As a classification problem the accuracy is also of great importance. Data
-presented to the user should be relevant and useful. 
+presented to the user should be relevant and useful and thus the final accuracy is a valuable metric. The stability of the algorithm during the learning phase may also be vital as small transient peaks or trough are undesirable.
 
 
 ### If you were assigned additional experts, how would your strategy be affected? ###
