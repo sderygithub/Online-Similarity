@@ -26,7 +26,8 @@ available but at a virtual cost.
 
 ##### Strategy #####
 
-- Hashing Vectorizer
+<strong>Hashing Vectorizer</strong>
+
 Although very relevant in many applications, TF-IDF is not suitable for online
 learning as the IDF of all past features will change with every new document -
 which would mean re-visiting and re-training on all the previous documents 
@@ -36,10 +37,12 @@ This strategy has several advantages:
 - Low memory requirement, making it scalable to large datasets (no need to store a vocabulary dictionary in memory)
 - Can be used in a streaming (partial fit) or parallel pipeline (no state computed during fit)
 
-- Naive Bayes
+<strong>Naive Bayes</strong>
+
 The resulting token (e.g. word) occurence matrix is fed to a Naive Bayes (NB) classifiers for learning discriminative features between paragraphs. NB holds many advantage in a distributed system. The training translate very well to MapReduce jobs and thus scales to datasets in the millions. It also requires small amount of training data to estimate parameters (useful for costly labelling). The main disadvantage relies in the wrong assumption of independence between features. This requires the addition of something along the lines of Belief Networks (see Improvements)
 
-- Label Propagation
+<strong>Label Propagation</strong>
+
 Using provided labels, we can propagate the confidence that similar data will have the same label among its first degree nodes (in an abstract similarity graph). By adjusting the sample weight according to this metric, we can take into account a larger mass of data from a smaller set of labelled data. For example, having the label "Neuroscience" for the sentence "Oscillatory phenomena and interaction of the human cortex", it is likely that "Interaction between brain regions through oscillation" should also be tagged "Neuroscience". We can capture this similarity through distributed neural network representation of sentences and use it in our Naive Bayes sample weight.
 
 Future work: I'm also attempting to lay the foundation for an online paragraph vectorizer based on distributed neural network. This will require updates on the vocabulary (see Improvement section) as at this moment in time it only allows weight updates based on new training data. Out of scope for this 2 days challenge but will definitely give it a shot in the next few weeks.
