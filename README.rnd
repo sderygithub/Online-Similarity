@@ -1,6 +1,7 @@
+## Online-Learning
+- by Sebastien Dery
 
-			Welcome to Classifying the Branch of Science (CBoS)
-_______________________________________________________________________________
+### Welcome to Classifying the Branch of Science (CBoS)
 
 This small project aims to lay the foundation for a streaming (mini-batch)
 classification pipeline of Scientific publication according to their
@@ -9,24 +10,25 @@ particle physics, microbiology, neuroscience, etc.).
 
 The challenge consist in having only a small subset of already labelled
 documents which must be used during classification. Additional labels are
-available but at a cost.  
+available but at a virtual cost.
 
-Development timeline
-- Data extraction
-- Sanity check and data exploration
-- Ground-truths and labels
-- Batch pipeline algorithms
-- Mini-batch / Streaming pipeline algorithms
-- Interactive Q/A learning scenario
-- Validating algorithm and accuracy
+#####Development timeline
+	Day 1 
+	  - Data extraction
+	  - Sanity check and data exploration
+	  - Ground-truths and labels
+	  - Batch pipeline algorithms
+	Day 2
+	  - Mini-batch / Streaming pipeline algorithms
+	  - Interactive Q/A learning scenario
+	  - Validating algorithm and accuracy
 
-TF-IDF, although very relevant in many applications, is not suitable for online
+Although very relevant in many applications, TF-IDF is not suitable for online
 learning as the IDF of all past features will change with every new document -
 which would mean re-visiting and re-training on all the previous documents 
-(no-longer online)
+(no-longer online). A straighforward alternative is to use Hashing of our paragraph as vectorizer which is then fed into classification algorithms. 
 
-A straighforward alternative is to use Hashing of our paragraph as vectorizer
-which is then fed into classification algorithms. 
+
 
 I also lay the foundation for an Paragraph Vectorizer which relies on the online
 update of vocabulary for NN word vectorizer approach. At this moment in time it
@@ -34,10 +36,7 @@ only allows weight updates based on new training data.
 
 
 
---------------------------------------------------------------------------------
-	   	 How would you build a classifier that improves its accuracy 
-						by minimizing the overall cost?
---------------------------------------------------------------------------------
+####How would you build a classifier that improves its accuracy by minimizing the overall cost?
 
 The problem at heart resides in taking maximum advantage of labelled data. 
 A first stop would be to look for similarities between labelled and unlabelled
@@ -50,39 +49,28 @@ Although this architecture permits more than one label per sentence, this work
 only puts to profit a single label as proof of concept. 
 
 
-
 Quoc Le & Tomáš Mikolov: “Distributed Representations of Sentences and Documents”
-
-Trend analysis
-
-The first set of experiment aims to test classification in batch-mode for
-sanity check.
-
-Sparse vectorizer
-
 https://radimrehurek.com/gensim/models/doc2vec.html
 
 
 
---------------------------------------------------------------------------------
-			How would you assess the performances of your system?
---------------------------------------------------------------------------------
+####How would you assess the performances of your system?
 
-Processing time
+#####Processing time
 
 The performance of such a system can be evaluated at multiple scale. One would
 need to monitor training time and the potential bottlenecks it includes 
 (vectorizing? training classifier? increasing vocabulary?). 
 
 
-Memory usage
+#####Memory usage
 
 When it comes to scalability, memory is often critical. Monitoring how much 
 RAM is necessary and particularly in what format (sparse versus dense matrix,
  )
 
 
-I/O
+#####I/O
 
 In any distributed system, input and output are often good starting point in 
 terms of optimizing operation. The location of the data on the cluster may
@@ -90,7 +78,7 @@ need tweaking in order to have frequently used data in the same disk-space
 so as to limit the overhead of communication.
 
 
-Accuracy
+#####Accuracy
 
 As a classification problem the accuracy is also of great importance. Data
 presented to the user should be relevant and useful. 
