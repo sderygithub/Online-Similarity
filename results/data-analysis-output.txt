@@ -1,0 +1,129 @@
+________________________________________________________________________________
+Loading Nature dataset for categories
+['microbiology', 'biochemistry', 'astrophysics', 'botany', 'climatology', 'epidemiology', 'geophysics', 'neuroscience', 'quantum']
+Data loaded
+7950 documents - 8.151MB (training set)
+1993 documents - 2.044MB (test set)
+9 categories
+________________________________________________________________________________
+Extracting features from the training data using a sparse vectorizer
+done in 1.540130s at 5.292MB/s
+n_samples: 7950, n_features: 1000
+________________________________________________________________________________
+Extracting features from the test data using the same vectorizer
+done in 0.371900s at 5.496MB/s
+n_samples: 1993, n_features: 1000
+================================================================================
+Ridge Classifier
+________________________________________________________________________________
+Training: 
+RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+        max_iter=None, normalize=False, random_state=None, solver='lsqr',
+        tol=0.01)
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sklearn/linear_model/ridge.py:299: UserWarning: In Ridge, only 'sag' solver can currently fit the intercept when X is sparse. Solver has been automatically changed into 'sag'.
+  warnings.warn("In Ridge, only 'sag' solver can currently fit the "
+train time: 0.868s
+test time:  0.002s
+accuracy:   0.862
+================================================================================
+Passive-Aggressive
+________________________________________________________________________________
+Training: 
+PassiveAggressiveClassifier(C=1.0, class_weight=None, fit_intercept=True,
+              loss='hinge', n_iter=50, n_jobs=1, random_state=None,
+              shuffle=True, verbose=0, warm_start=False)
+train time: 1.094s
+test time:  0.002s
+accuracy:   0.821
+================================================================================
+kNN
+________________________________________________________________________________
+Training: 
+KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+           metric_params=None, n_jobs=1, n_neighbors=10, p=2,
+           weights='uniform')
+train time: 0.003s
+test time:  1.344s
+accuracy:   0.810
+================================================================================
+L2 penalty
+________________________________________________________________________________
+Training: 
+LinearSVC(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='l2', max_iter=1000, multi_class='ovr',
+     penalty='l2', random_state=None, tol=0.001, verbose=0)
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sklearn/svm/classes.py:197: DeprecationWarning: loss='l2' has been deprecated in favor of loss='squared_hinge' as of 0.16. Backward compatibility for the loss='l2' will be removed in 1.0
+  DeprecationWarning)
+train time: 0.448s
+test time:  0.002s
+accuracy:   0.868
+________________________________________________________________________________
+Training: 
+SGDClassifier(alpha=0.0001, average=False, class_weight=None, epsilon=0.1,
+       eta0=0.0, fit_intercept=True, l1_ratio=0.15,
+       learning_rate='optimal', loss='hinge', n_iter=50, n_jobs=1,
+       penalty='l2', power_t=0.5, random_state=None, shuffle=True,
+       verbose=0, warm_start=False)
+train time: 0.898s
+test time:  0.002s
+accuracy:   0.870
+================================================================================
+L1 penalty
+________________________________________________________________________________
+Training: 
+LinearSVC(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='l2', max_iter=1000, multi_class='ovr',
+     penalty='l1', random_state=None, tol=0.001, verbose=0)
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sklearn/svm/classes.py:197: DeprecationWarning: loss='l2' has been deprecated in favor of loss='squared_hinge' as of 0.16. Backward compatibility for the loss='l2' will be removed in 1.0
+  DeprecationWarning)
+train time: 5.304s
+test time:  0.002s
+accuracy:   0.870
+________________________________________________________________________________
+Training: 
+SGDClassifier(alpha=0.0001, average=False, class_weight=None, epsilon=0.1,
+       eta0=0.0, fit_intercept=True, l1_ratio=0.15,
+       learning_rate='optimal', loss='hinge', n_iter=50, n_jobs=1,
+       penalty='l1', power_t=0.5, random_state=None, shuffle=True,
+       verbose=0, warm_start=False)
+train time: 2.546s
+test time:  0.002s
+accuracy:   0.871
+================================================================================
+Elastic-Net penalty
+________________________________________________________________________________
+Training: 
+SGDClassifier(alpha=0.0001, average=False, class_weight=None, epsilon=0.1,
+       eta0=0.0, fit_intercept=True, l1_ratio=0.15,
+       learning_rate='optimal', loss='hinge', n_iter=50, n_jobs=1,
+       penalty='elasticnet', power_t=0.5, random_state=None, shuffle=True,
+       verbose=0, warm_start=False)
+train time: 3.296s
+test time:  0.002s
+accuracy:   0.872
+================================================================================
+NearestCentroid (aka Rocchio classifier)
+________________________________________________________________________________
+Training: 
+NearestCentroid(metric='euclidean', shrink_threshold=None)
+train time: 0.086s
+test time:  0.019s
+accuracy:   0.825
+================================================================================
+LinearSVC with L1-based feature selection
+________________________________________________________________________________
+Training: 
+Pipeline(steps=[('feature_selection', LinearSVC(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l1', random_state=None, tol=0.001,
+     verbose=0)), ('classification', LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0))])
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sklearn/utils/__init__.py:93: DeprecationWarning: Function transform is deprecated; Support to use estimators as feature selectors will be removed in version 0.19. Use SelectFromModel instead.
+  warnings.warn(msg, category=DeprecationWarning)
+train time: 5.826s
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sklearn/utils/__init__.py:93: DeprecationWarning: Function transform is deprecated; Support to use estimators as feature selectors will be removed in version 0.19. Use SelectFromModel instead.
+  warnings.warn(msg, category=DeprecationWarning)
+test time:  0.007s
+accuracy:   0.869

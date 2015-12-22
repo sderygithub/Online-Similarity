@@ -1,0 +1,414 @@
+________________________________________________________________________________
+Welcome to Online Learning Demo
+On the menu today
+Categories: microbiology,biochemistry,astrophysics,botany,climatology,epidemiology,geophysics,neuroscience,quantum
+Number of features: 2000
+Minibatch size: 100
+Vectorizer: hashing
+________________________________________________________________________________
+Initializing hashing vectorizer
+Parsing a maximum of 10000 documents from the testing repository
+Number of documents: 1993
+Number of classes: 9
+Extracting features from the testing dataset using a sparse vectorizer
+Main learning loop
+ 
+  Passive-Aggressive classifier : 	accuracy: 0.020 in 0.03s ( 3714 docs/s)
+                 SGD classifier : 	accuracy: 0.020 in 0.03s ( 3281 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.020 in 0.03s ( 2957 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.368 in 0.07s ( 3071 docs/s)
+                 SGD classifier : 	accuracy: 0.378 in 0.07s ( 2922 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.098 in 0.07s ( 2793 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.385 in 0.10s ( 3143 docs/s)
+                 SGD classifier : 	accuracy: 0.388 in 0.10s ( 3036 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.324 in 0.10s ( 2945 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.13s ( 3184 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.13s ( 3050 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.371 in 0.14s ( 2946 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.16s ( 3099 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.16s ( 3032 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.17s ( 2978 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.19s ( 3148 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.19s ( 3093 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.385 in 0.20s ( 3042 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.22s ( 3192 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.22s ( 3146 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.385 in 0.23s ( 3104 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.25s ( 3228 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.25s ( 3184 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.384 in 0.25s ( 3145 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.28s ( 3250 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.28s ( 3212 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.28s ( 3166 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.31s ( 3240 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.31s ( 3205 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.31s ( 3175 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.34s ( 3260 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.34s ( 3226 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.34s ( 3198 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.37s ( 3268 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.37s ( 3239 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.384 in 0.37s ( 3213 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.40s ( 3289 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.40s ( 3261 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.384 in 0.40s ( 3238 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.42s ( 3297 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.43s ( 3272 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.43s ( 3249 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.45s ( 3310 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.46s ( 3286 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.46s ( 3265 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.48s ( 3318 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.49s ( 3296 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.49s ( 3276 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.51s ( 3323 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.51s ( 3302 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.52s ( 3284 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.54s ( 3336 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.54s ( 3316 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.55s ( 3298 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.57s ( 3344 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.57s ( 3325 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.57s ( 3308 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.60s ( 3349 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.60s ( 3331 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.60s ( 3314 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.63s ( 3352 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.63s ( 3334 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.63s ( 3319 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.66s ( 3356 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.66s ( 3338 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.66s ( 3323 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.68s ( 3360 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.69s ( 3343 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.384 in 0.69s ( 3329 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.72s ( 3350 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.72s ( 3333 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.384 in 0.72s ( 3319 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.75s ( 3343 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.75s ( 3327 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.384 in 0.75s ( 3313 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.78s ( 3329 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.78s ( 3314 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.384 in 0.79s ( 3301 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.81s ( 3322 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.82s ( 3307 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.384 in 0.82s ( 3295 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.85s ( 3307 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.85s ( 3293 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.85s ( 3281 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.88s ( 3308 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.88s ( 3296 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.88s ( 3285 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.91s ( 3309 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.91s ( 3297 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.91s ( 3286 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.94s ( 3313 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.94s ( 3301 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.94s ( 3290 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.383 in 0.97s ( 3315 docs/s)
+                 SGD classifier : 	accuracy: 0.383 in 0.97s ( 3304 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.383 in 0.97s ( 3293 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.433 in 1.00s ( 3309 docs/s)
+                 SGD classifier : 	accuracy: 0.354 in 1.00s ( 3299 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.438 in 1.00s ( 3289 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.348 in 1.03s ( 3315 docs/s)
+                 SGD classifier : 	accuracy: 0.207 in 1.03s ( 3304 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.453 in 1.03s ( 3295 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.290 in 1.05s ( 3319 docs/s)
+                 SGD classifier : 	accuracy: 0.178 in 1.06s ( 3309 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.457 in 1.06s ( 3299 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.264 in 1.08s ( 3319 docs/s)
+                 SGD classifier : 	accuracy: 0.167 in 1.09s ( 3308 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.460 in 1.09s ( 3299 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.202 in 1.11s ( 3327 docs/s)
+                 SGD classifier : 	accuracy: 0.132 in 1.12s ( 3316 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.461 in 1.12s ( 3307 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.176 in 1.14s ( 3326 docs/s)
+                 SGD classifier : 	accuracy: 0.116 in 1.15s ( 3316 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.461 in 1.15s ( 3301 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.269 in 1.18s ( 3304 docs/s)
+                 SGD classifier : 	accuracy: 0.118 in 1.18s ( 3294 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.461 in 1.19s ( 3284 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.304 in 1.21s ( 3298 docs/s)
+                 SGD classifier : 	accuracy: 0.095 in 1.22s ( 3289 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.472 in 1.22s ( 3281 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.228 in 1.24s ( 3294 docs/s)
+                 SGD classifier : 	accuracy: 0.073 in 1.25s ( 3285 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.483 in 1.25s ( 3276 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.212 in 1.28s ( 3293 docs/s)
+                 SGD classifier : 	accuracy: 0.064 in 1.28s ( 3284 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.487 in 1.28s ( 3272 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.100 in 1.31s ( 3276 docs/s)
+                 SGD classifier : 	accuracy: 0.069 in 1.32s ( 3267 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.488 in 1.32s ( 3254 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.122 in 1.35s ( 3259 docs/s)
+                 SGD classifier : 	accuracy: 0.081 in 1.35s ( 3251 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.496 in 1.36s ( 3244 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.113 in 1.38s ( 3258 docs/s)
+                 SGD classifier : 	accuracy: 0.069 in 1.38s ( 3250 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.512 in 1.39s ( 3243 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.108 in 1.41s ( 3257 docs/s)
+                 SGD classifier : 	accuracy: 0.060 in 1.42s ( 3249 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.514 in 1.42s ( 3242 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.365 in 1.44s ( 3255 docs/s)
+                 SGD classifier : 	accuracy: 0.330 in 1.45s ( 3248 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.523 in 1.45s ( 3241 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.331 in 1.47s ( 3260 docs/s)
+                 SGD classifier : 	accuracy: 0.319 in 1.48s ( 3252 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.572 in 1.48s ( 3246 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.326 in 1.50s ( 3265 docs/s)
+                 SGD classifier : 	accuracy: 0.316 in 1.50s ( 3258 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.619 in 1.51s ( 3251 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.321 in 1.53s ( 3271 docs/s)
+                 SGD classifier : 	accuracy: 0.315 in 1.53s ( 3264 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.645 in 1.53s ( 3258 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.319 in 1.56s ( 3272 docs/s)
+                 SGD classifier : 	accuracy: 0.312 in 1.56s ( 3265 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.666 in 1.56s ( 3258 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.318 in 1.59s ( 3277 docs/s)
+                 SGD classifier : 	accuracy: 0.310 in 1.59s ( 3270 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.681 in 1.59s ( 3264 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.315 in 1.62s ( 3277 docs/s)
+                 SGD classifier : 	accuracy: 0.310 in 1.62s ( 3270 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.693 in 1.62s ( 3265 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.314 in 1.65s ( 3277 docs/s)
+                 SGD classifier : 	accuracy: 0.310 in 1.65s ( 3271 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.706 in 1.65s ( 3265 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.313 in 1.68s ( 3280 docs/s)
+                 SGD classifier : 	accuracy: 0.309 in 1.68s ( 3273 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.712 in 1.68s ( 3266 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.312 in 1.71s ( 3282 docs/s)
+                 SGD classifier : 	accuracy: 0.307 in 1.71s ( 3275 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.720 in 1.71s ( 3269 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.312 in 1.74s ( 3280 docs/s)
+                 SGD classifier : 	accuracy: 0.305 in 1.74s ( 3272 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.726 in 1.74s ( 3267 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.309 in 1.77s ( 3285 docs/s)
+                 SGD classifier : 	accuracy: 0.304 in 1.77s ( 3278 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.730 in 1.77s ( 3273 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.309 in 1.79s ( 3288 docs/s)
+                 SGD classifier : 	accuracy: 0.302 in 1.80s ( 3282 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.733 in 1.80s ( 3276 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.307 in 1.82s ( 3293 docs/s)
+                 SGD classifier : 	accuracy: 0.300 in 1.82s ( 3287 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.736 in 1.83s ( 3282 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.306 in 1.85s ( 3294 docs/s)
+                 SGD classifier : 	accuracy: 0.300 in 1.85s ( 3288 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.739 in 1.86s ( 3283 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.306 in 1.88s ( 3298 docs/s)
+                 SGD classifier : 	accuracy: 0.300 in 1.88s ( 3293 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.742 in 1.89s ( 3287 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.306 in 1.91s ( 3303 docs/s)
+                 SGD classifier : 	accuracy: 0.300 in 1.91s ( 3296 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.743 in 1.91s ( 3291 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.305 in 1.94s ( 3307 docs/s)
+                 SGD classifier : 	accuracy: 0.300 in 1.94s ( 3301 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.744 in 1.94s ( 3296 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.304 in 1.96s ( 3309 docs/s)
+                 SGD classifier : 	accuracy: 0.299 in 1.97s ( 3303 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.743 in 1.97s ( 3298 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.302 in 1.99s ( 3310 docs/s)
+                 SGD classifier : 	accuracy: 0.298 in 2.00s ( 3304 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.745 in 2.00s ( 3298 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.301 in 2.02s ( 3311 docs/s)
+                 SGD classifier : 	accuracy: 0.298 in 2.03s ( 3306 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.747 in 2.03s ( 3301 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.301 in 2.05s ( 3314 docs/s)
+                 SGD classifier : 	accuracy: 0.298 in 2.05s ( 3309 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.747 in 2.06s ( 3304 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.448 in 2.08s ( 3312 docs/s)
+                 SGD classifier : 	accuracy: 0.439 in 2.09s ( 3306 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.752 in 2.09s ( 3301 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.402 in 2.11s ( 3312 docs/s)
+                 SGD classifier : 	accuracy: 0.380 in 2.12s ( 3307 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.797 in 2.12s ( 3302 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.351 in 2.14s ( 3312 docs/s)
+                 SGD classifier : 	accuracy: 0.339 in 2.15s ( 3307 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.818 in 2.15s ( 3302 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.310 in 2.17s ( 3310 docs/s)
+                 SGD classifier : 	accuracy: 0.288 in 2.18s ( 3304 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.828 in 2.18s ( 3299 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.302 in 2.21s ( 3309 docs/s)
+                 SGD classifier : 	accuracy: 0.275 in 2.21s ( 3304 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.835 in 2.21s ( 3299 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.297 in 2.23s ( 3312 docs/s)
+                 SGD classifier : 	accuracy: 0.275 in 2.24s ( 3306 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.839 in 2.24s ( 3302 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.290 in 2.26s ( 3313 docs/s)
+                 SGD classifier : 	accuracy: 0.256 in 2.27s ( 3308 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.843 in 2.27s ( 3304 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.272 in 2.29s ( 3315 docs/s)
+                 SGD classifier : 	accuracy: 0.239 in 2.30s ( 3310 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.845 in 2.30s ( 3306 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.254 in 2.32s ( 3316 docs/s)
+                 SGD classifier : 	accuracy: 0.215 in 2.33s ( 3308 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.846 in 2.33s ( 3302 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.248 in 2.36s ( 3305 docs/s)
+                 SGD classifier : 	accuracy: 0.209 in 2.36s ( 3300 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.848 in 2.37s ( 3296 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.215 in 2.39s ( 3305 docs/s)
+                 SGD classifier : 	accuracy: 0.181 in 2.39s ( 3301 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.849 in 2.40s ( 3297 docs/s)
+
+
+  Passive-Aggressive classifier : 	accuracy: 0.208 in 2.41s ( 3300 docs/s)
+                 SGD classifier : 	accuracy: 0.181 in 2.41s ( 3295 docs/s)
+      NB Multinomial classifier : 	accuracy: 0.849 in 2.42s ( 3291 docs/s)
+

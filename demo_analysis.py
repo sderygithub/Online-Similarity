@@ -31,9 +31,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 """
 
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import HashingVectorizer
 
 from src.io.utils import load_categoryfile
 from src.io.batch import fetch_naturetitles
+from src.analysis.feature_extraction.text import AbstractVectorizer
+
+from time import time
+import numpy as np
 
 
 """
@@ -44,11 +50,16 @@ from src.io.batch import fetch_naturetitles
 
 
 categories = [
-    'neuroscience',
+    'microbiology',
     'biochemistry',
-    'astrophysics'
+    'astrophysics',
+    'botany',
+    'climatology',
+    'epidemiology',
+    'geophysics',
+    'neuroscience',
+    'quantum'
 ]
-categories = None
 
 print('_' * 80)
 print("Loading Nature dataset for categories")
@@ -93,12 +104,6 @@ y_train, y_test = data_train['target'], data_test['target']
 -------------------------------------------------------------------------------
 """
 
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.feature_extraction.text import HashingVectorizer
-from AbstractVectorizer import AbstractVectorizer
-
-from time import time
-import numpy as np
 
 print('_' * 80)
 print("Extracting features from the training data using a sparse vectorizer")

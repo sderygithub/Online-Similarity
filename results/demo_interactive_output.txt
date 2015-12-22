@@ -1,0 +1,25 @@
+--------------------------------------------------------------------------------
+Welcome to Interactive Classification Demo
+ 
+You will shortly be asked to provide sentences which will then be
+classified based on the input trained classifier. Don't worry nothing critical 
+is going to happen. This is purely to have some fun and see how various 
+permutation of sentences are classified.
+Example: Internally generated cell assembly sequences in the rat hippocampus
+--------------------------------------------------------------------------------
+Enter Scientific sounding sentence (or Enter to quit):
+Antiviral treatment is more effective than smallpox vaccination upon lethal monkeypox virus infection
+BIOCHEMISTRY
+--------------------------------------------------------------------------------
+Enter Scientific sounding sentence (or Enter to quit):
+Survival of a brown dwarf after engulfment by a red giant star
+ASTROPHYSICS
+--------------------------------------------------------------------------------
+Enter Scientific sounding sentence (or Enter to quit):
+Cortical substrates for exploratory decisions in humans
+NEUROSCIENCE
+--------------------------------------------------------------------------------
+Enter Scientific sounding sentence (or Enter to quit):
+Magnetic impurity formation in quantum point contacts
+QUANTUM
+--------------------------------------------------------------------------------
