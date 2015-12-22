@@ -1,0 +1,17 @@
+neurobiology,neurobiology,brain,neuro,cognitive,brainstem,prefrontal, cortex, cerebral,neuroscience,inhibitory, inhibitor, regulation, regulated, dopamine, neurotransmitter, mutations,dna,homeostatis,diabetes,opiates
+neuroscience,neuroscience,brain,neuro,cognitive,brainstem,prefrontal, cortex, cerebral
+evolutionary_biology,evolution, evolutionary, primate
+epidemiology,epigenetic, epidemiology, epidemic, host, immunity
+astrophysics,astrophysics,gamma-ray, radio, high-energy, metagalactic, galactic, quark, stars, star, astrophysic, supernovae, burst
+climatology,climate,climatology,atmosphere, earth
+geophysics,geophysic,tectonic, plate, mantle, erosion
+glacialogy,glaciation, ice
+quantum,quantum,computation, energy, spectra, tunnel, magnetic, insulator, atomic)
+biochemistry,biochemistry,polymerase,protein,metabolism,biochemical process,nucleotide,protease,enzyme
+botany,botany,plant,photosynthesis
+genetics,dna,rna,operon,hereditary,gene,genetic,diploid,haploid
+microbiology,e. coli,replication,genome
+molecular biology,conformation,molecules,mrna,dna
+astronomy,astronomy,planet,observatory,galaxy,galaxies
+surface_chemistry,surface chemistry,interface,monolayer,surface,liquid-gas,solid-liquid,solid-gas
+virology,virology,viral,virus,genome,host cell
